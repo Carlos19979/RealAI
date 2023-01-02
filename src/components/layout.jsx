@@ -1,9 +1,8 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import React from 'react'
+import { useState } from "react";
 
-function App() {
-  const [open, setOpen] = useState(true);
+export default function layout() {
+    const [open, setOpen] = useState(true);
     const Menus = [
       { title: "Dashboard", src: "Chart_fill" },
       { title: "Inbox", src: "Chat" },
@@ -16,7 +15,7 @@ function App() {
     ];
   
     return (
-      <div className="flex">
+      <div className="flex w-screen h-screen">
         <div
           className={` ${
             open ? "w-72" : "w-20 "
@@ -66,5 +65,3 @@ function App() {
       </div>
     );
 }
-
-export default App
